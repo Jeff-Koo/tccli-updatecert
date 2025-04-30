@@ -1,12 +1,12 @@
 # TCCLI Certificate Updater
 
-This tool automates the process of updating SSL certificates in Tencent Cloud using the Tencent Cloud CLI (TCCLI). It extracts certificates from Traefik's acme.json file and updates them in Tencent Cloud.
+This tool automates the process of updating SSL certificates in Tencent Cloud using the Tencent Cloud CLI (TCCLI). It extracts certificates from Traefik's `acme.json` file and updates them in Tencent Cloud.
 
 ## Prerequisites
 
 - Docker and Docker Compose installed on your system
 - Tencent Cloud account with appropriate permissions
-- Traefik with acme.json file containing your certificates
+- Traefik with `acme.json` file containing your certificates
 
 ## Setup Instructions
 
