@@ -1,0 +1,13 @@
+services:
+  updatecert:
+    build: .
+    image: dockerregistry.krystal.education/tccli-updatecert:latest
+    entrypoint: /bin/bash /etc/entrypoint.sh
+    volumes:
+      - /home/ubuntu/traefik/acme.json:/data/acme.json:ro # Mount traefik volume as read-only
+      - ./tccli-profile.sh:/etc/tccli-profile.sh
+      - ./entrypoint.sh:/etc/entrypoint.sh
+    deploy:
+      resources:
+        limits: { cpus: '0.1', memory: '32M' }
+        reservations: { cpus: '0.025', memory: '16M' }
